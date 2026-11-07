@@ -916,9 +916,17 @@
 
     </div>
 
+    <!-- El navegador prueba cada fuente en orden hasta encontrar una que exista.
+         Se cubren mayúsculas/minúsculas porque en hosting (Linux) "TRUENO.mp3" y "trueno.mp3" son archivos distintos. -->
     <audio id="bg-music" preload="auto" loop>
-    <source src="./TRUENO.mp3" type="audio/mpeg">
-</audio>
+        <source src="TRUENO.mp3" type="audio/mpeg">
+        <source src="trueno.mp3" type="audio/mpeg">
+        <source src="Trueno.mp3" type="audio/mpeg">
+        <source src="TRUENO.MP3" type="audio/mpeg">
+        <source src="trueno.m4a" type="audio/mp4">
+        <source src="trueno.ogg" type="audio/ogg">
+        <source src="trueno.wav" type="audio/wav">
+    </audio>
 
     <!-- SCRIPT ENGINE -->
     <script>
@@ -1006,10 +1014,30 @@
         bgAudio.loop = true;
         bgAudio.volume = currentVolume / 100;
 
+        let audioMissing = false;
+
+        // Si ninguna de las fuentes <source> existe, el error se dispara en la última
+        const lastSource = bgAudio.querySelector('source:last-of-type');
+        if (lastSource) {
+            lastSource.addEventListener('error', () => {
+                audioMissing = true;
+                isPlaying = false;
+                console.error('No se encontró el archivo de audio. Debe llamarse TRUENO.mp3 (o trueno.mp3) y estar en la misma carpeta que index.html');
+                stopEqualizer();
+                updateAudioUI();
+            });
+        }
+
         function startCinematicMusic() {
+            if (audioMissing) { updateAudioUI(); return; }
             isPlaying = true;
             const p = bgAudio.play();
-            if (p && p.catch) p.catch(() => { isPlaying = false; stopEqualizer(); updateAudioUI(); });
+            if (p && p.catch) p.catch((err) => {
+                console.warn('No se pudo reproducir el audio:', err);
+                isPlaying = false;
+                stopEqualizer();
+                updateAudioUI();
+            });
             updateAudioUI();
             startEqualizer();
         }
@@ -1080,8 +1108,8 @@
                 statusEl.className = isMuted ? 'text-slate-400 font-bold' : 'text-green-400 font-bold';
                 playIconEl.setAttribute('data-lucide', 'pause');
             } else {
-                statusEl.innerText = 'PAUSADO';
-                statusEl.className = 'text-slate-400 font-bold';
+                statusEl.innerText = audioMissing ? 'ARCHIVO TRUENO.mp3 NO ENCONTRADO' : 'PAUSADO';
+                statusEl.className = audioMissing ? 'text-red-400 font-bold' : 'text-slate-400 font-bold';
                 playIconEl.setAttribute('data-lucide', 'play');
             }
 
