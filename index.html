@@ -306,7 +306,7 @@
                     <button onclick="navigateTo('services')" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-all cursor-pointer">Servicios</button>
                     <button onclick="navigateTo('portfolio')" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-all cursor-pointer flex items-center space-x-1.5">
                         <span class="w-2 h-2 rounded-full bg-brand-crimson animate-pulse"></span>
-                        <span>Mis Trabajos</span>
+                        <span>Nosotros</span>
                     </button>
                     <button onclick="navigateTo('calculator')" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-all cursor-pointer">Cotizador</button>
                     <button onclick="navigateTo('about')" class="px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-all cursor-pointer">Sobre David</button>
@@ -323,7 +323,7 @@
             <div id="mobile-menu" class="hidden lg:hidden pt-4 pb-2 border-t border-white/10 mt-3 space-y-2 font-tech text-xs uppercase tracking-wider font-semibold">
                 <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-slate-200 hover:bg-white/5">Inicio</button>
                 <button onclick="navigateTo('services'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-slate-200 hover:bg-white/5">Servicios Negocios</button>
-                <button onclick="navigateTo('portfolio'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-brand-crimson font-bold hover:bg-white/5">Mis Trabajos (Proyectos)</button>
+                <button onclick="navigateTo('portfolio'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-brand-crimson font-bold hover:bg-white/5">Nosotros</button>
                 <button onclick="navigateTo('calculator'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-slate-200 hover:bg-white/5">Cotizador Interactivo</button>
                 <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl text-slate-200 hover:bg-white/5">Sobre David</button>
                 <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 rounded-xl bg-brand-crimson text-white font-bold">Contactar a David</button>
@@ -369,9 +369,9 @@
                         <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button onclick="navigateTo('portfolio')" class="group p-5 rounded-2xl glass-card text-left flex items-start justify-between border-l-4 border-l-brand-crimson cursor-pointer">
                                 <div>
-                                    <span class="text-xs font-tech text-brand-crimson tracking-widest uppercase block mb-1 font-bold">Explorar Proyectos</span>
-                                    <h3 class="font-display font-extrabold text-lg text-white group-hover:text-brand-crimson transition-colors">Mis Trabajos &amp; Galería</h3>
-                                    <p class="text-xs text-slate-400 mt-1">Mira muestras reales de diseño y publicidad.</p>
+                                    <span class="text-xs font-tech text-brand-crimson tracking-widest uppercase block mb-1 font-bold">Conócenos</span>
+                                    <h3 class="font-display font-extrabold text-lg text-white group-hover:text-brand-crimson transition-colors">Nosotros</h3>
+                                    <p class="text-xs text-slate-400 mt-1">Mira nuestro video y conoce MT Service.</p>
                                 </div>
                                 <i data-lucide="play-circle" class="w-6 h-6 text-brand-crimson group-hover:scale-110 transition-transform shrink-0 ml-3"></i>
                             </button>
@@ -436,18 +436,18 @@
             </section>
 
 
-            <!-- ================= VIEW 2: MIS TRABAJOS (PORTFOLIO) ================= -->
+            <!-- ================= VIEW 2: NOSOTROS ================= -->
             <section id="view-portfolio" class="view-section space-y-10">
                 <div class="space-y-3">
                     <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-crimson/10 border border-brand-crimson/30 text-brand-crimson font-tech text-xs tracking-widest uppercase font-bold">
                         <i data-lucide="film" class="w-3.5 h-3.5"></i>
-                        <span>GALERÍA DE PROYECTOS &amp; MUESTRAS MULTIMEDIA</span>
+                        <span>CONOCE MT SERVICE</span>
                     </div>
                     <h2 class="font-montserrat text-4xl sm:text-5xl font-black text-white">
-                        Mis Trabajos <span class="text-gradient-crimson">Destacados</span>
+                        <span class="text-gradient-crimson">Nosotros</span>
                     </h2>
                     <p class="text-slate-400 text-sm max-w-2xl font-light">
-                        Aquí puedes visualizar el showcase cinematográfico y proyectos reales desarrollados por David para clientes de MT Service en diseño web, publicidad y soluciones interactivas.
+                        Mira el video y conoce quiénes somos y cómo trabajamos en MT Service en diseño web, publicidad y soluciones interactivas.
                     </p>
                 </div>
 
@@ -458,22 +458,27 @@
                             <span class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></span>
                             <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
                             <span class="w-3 h-3 rounded-full bg-green-500"></span>
-                            <span class="text-xs font-tech text-slate-300 ml-2 font-bold tracking-wider">SHOWCASE WEB CINEMATOGRÁFICO - CDM</span>
+                            <span class="text-xs font-tech text-slate-300 ml-2 font-bold tracking-wider">VIDEO NOSOTROS - MT SERVICE</span>
                         </div>
                         <span class="text-xs font-tech text-brand-crimson font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-brand-crimson/10 border border-brand-crimson/30">MUESTRA VIDEO MP4</span>
                     </div>
 
-                    <!-- Native HTML5 Video Container for bandicam 2026-10-29 10-16-56-376.mp4 -->
+                    <!-- Reproductor de video HTML5 (archivo: video.mp4) -->
                     <div class="relative w-full rounded-2xl overflow-hidden bg-black border border-white/10 flex items-center justify-center group shadow-2xl">
-                        <video 
+                        <video
                             id="portfolio-video"
-                            class="w-full h-auto block rounded-2xl" style="aspect-ratio:1920/952;background:#000" 
-                            controls 
+                            class="w-full h-auto block rounded-2xl" style="background:#000"
+                            controls
                             playsinline
-                            preload="auto">
-                            <source src="/_blob/13a9e944c45f34113fa6a7f1b5cc0e67" type="video/mp4">
+                            preload="metadata">
+                            <source src="video.mp4" type="video/mp4">
+                            <source src="Video.mp4" type="video/mp4">
+                            <source src="VIDEO.mp4" type="video/mp4">
                             Tu navegador no admite la reproducción directa de este video HTML5.
                         </video>
+                        <div id="video-missing" class="hidden absolute inset-0 flex items-center justify-center bg-black/90 text-center p-6">
+                            <p class="font-tech text-sm text-red-400 font-bold">No se encontró video.mp4. Debe estar en la misma carpeta que index.html.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1042,6 +1047,33 @@
             startEqualizer();
         }
 
+        /* ===== VIDEO "NOSOTROS" (video.mp4) ===== */
+        (function () {
+            const vid = document.getElementById('portfolio-video');
+            const missing = document.getElementById('video-missing');
+            if (!vid) return;
+
+            // Si ninguna fuente existe, el error se dispara en la última <source>
+            const lastVidSrc = vid.querySelector('source:last-of-type');
+            if (lastVidSrc && missing) {
+                lastVidSrc.addEventListener('error', () => {
+                    missing.classList.remove('hidden');
+                    console.error('No se encontró video.mp4. Debe estar en la misma carpeta que index.html');
+                });
+            }
+
+            // Mientras suena el video se pausa la música de fondo, para que se escuche bien
+            let resumeMusic = false;
+            vid.addEventListener('play', () => {
+                if (isPlaying) { resumeMusic = true; pauseCinematicMusic(); }
+            });
+            const backToMusic = () => {
+                if (resumeMusic) { resumeMusic = false; startCinematicMusic(); }
+            };
+            vid.addEventListener('pause', backToMusic);
+            vid.addEventListener('ended', backToMusic);
+        })();
+
         function pauseCinematicMusic() {
             isPlaying = false;
             bgAudio.pause();
@@ -1176,7 +1208,7 @@
                 backBar.classList.remove('hidden');
                 const titleMap = {
                     'services': 'APARTADO: SERVICIOS PARA NEGOCIOS',
-                    'portfolio': 'APARTADO: MIS TRABAJOS & GALERÍA',
+                    'portfolio': 'APARTADO: NOSOTROS',
                     'calculator': 'APARTADO: COTIZADOR EN TIEMPO REAL',
                     'about': 'APARTADO: SOBRE DAVID & MT SERVICE',
                     'contact': 'APARTADO: CONTACTO DIRECTO'
