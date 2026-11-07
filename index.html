@@ -1001,6 +1001,11 @@
         }
         animateParticles();
 
+        /* ================= MÚSICA DE FONDO (The Godfather Theme - Slowed & Reverb) ================= */
+        const bgAudio = document.getElementById('bg-music');
+        bgAudio.loop = true;
+        bgAudio.volume = currentVolume / 100;
+
         function startCinematicMusic() {
             isPlaying = true;
             const p = bgAudio.play();
